@@ -20,7 +20,7 @@ class RethinkPlugin {
         this.registerPlugin("userOperation", userOperation, ["event", "blocklistFilter"], userOperationCallBack, false)
         this.registerPlugin("dnsBlock", dnsBlock, ["event", "blocklistFilter", "userBlocklistInfo"], dnsBlockCallBack, false)
         this.registerPlugin("dnsResolver", dnsResolver, ["event", "userBlocklistInfo"], dnsResolverCallBack, false)
-        this.registerPlugin("dnsCnameBlock", dnsCnameBlock, ["event", "userBlocklistInfo", "blocklistFilter", "dnsResolverResponse"], dnsCnameBlockCallBack, false)
+        this.registerPlugin("dnsCnameBlock", dnsCnameBlock, ["event", "userBlocklistInfo", "blocklistFilter", "dnsResolverResponse"], dnsCnameBlockCallBack, true)
     }
 
     registerParameter(key, parameter) {
